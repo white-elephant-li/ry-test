@@ -27,7 +27,7 @@ import com.ruoyi.system.service.ISysUserService;
 
 /**
  * 个人信息 业务处理
- * 
+ *
  * @author ruoyi
  */
 @RestController
@@ -75,7 +75,7 @@ public class SysProfileController extends BaseController
         {
             LoginUser loginUser = tokenService.getLoginUser(ServletUtils.getRequest());
             // 更新缓存用户信息
-            loginUser.getUser().setNickName(user.getNickName());
+            loginUser.getUser().setStudyId(user.getStudyId());
             loginUser.getUser().setPhonenumber(user.getPhonenumber());
             loginUser.getUser().setEmail(user.getEmail());
             loginUser.getUser().setSex(user.getSex());

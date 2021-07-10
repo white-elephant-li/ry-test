@@ -17,7 +17,7 @@ import com.ruoyi.common.core.domain.BaseEntity;
 
 /**
  * 用户对象 sys_user
- * 
+ *
  * @author ruoyi
  */
 public class SysUser extends BaseEntity
@@ -36,9 +36,9 @@ public class SysUser extends BaseEntity
     @Excel(name = "登录名称")
     private String userName;
 
-    /** 用户昵称 */
-    @Excel(name = "用户名称")
-    private String nickName;
+    /** 用户学号 */
+    @Excel(name = "用户学号")
+    private String studyId;
 
     /** 用户邮箱 */
     @Excel(name = "用户邮箱")
@@ -132,15 +132,15 @@ public class SysUser extends BaseEntity
         this.deptId = deptId;
     }
 
-    @Size(min = 0, max = 30, message = "用户昵称长度不能超过30个字符")
-    public String getNickName()
+    @Size(min = 0, max = 30, message = "用户学号长度不能超过30个字符")
+    public String getStudyId()
     {
-        return nickName;
+        return studyId;
     }
 
-    public void setNickName(String nickName)
+    public void setStudyId(String studyId)
     {
-        this.nickName = nickName;
+        this.studyId = studyId;
     }
 
     @NotBlank(message = "用户账号不能为空")
@@ -306,7 +306,7 @@ public class SysUser extends BaseEntity
             .append("userId", getUserId())
             .append("deptId", getDeptId())
             .append("userName", getUserName())
-            .append("nickName", getNickName())
+            .append("studyId", getStudyId())
             .append("email", getEmail())
             .append("phonenumber", getPhonenumber())
             .append("sex", getSex())
